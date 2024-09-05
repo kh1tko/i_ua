@@ -1,5 +1,3 @@
-import time
-
 from Pages.MainPage import MainPage
 from Configurations.TestData import TestData
 from Pages.WeatherPage import WeatherPage

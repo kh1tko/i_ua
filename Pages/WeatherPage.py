@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from Pages.MainPage import MainPage
 
 
+
 class WeatherPage(MainPage):
     change_city_weather_menu = (By.ID, 'all_cities_button')
     chosen_city_weather = (By.CSS_SELECTOR, "a[href='/Poltava/']")
