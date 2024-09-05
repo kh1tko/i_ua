@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
 
-
 class MainPage:
     textbox_search_field = (By.ID, "searchQ")
     find_search_button = (By.XPATH, "//input[@value='Знайти']")
