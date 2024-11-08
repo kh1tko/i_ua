@@ -1,3 +1,5 @@
+from telnetlib import X3PAD
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
@@ -6,6 +8,7 @@ class MainPage:
     textbox_search_field = (By.ID, "searchQ")
     find_search_button = (By.XPATH, "//input[@value='Знайти']")
     weather_button = (By.XPATH, "//a[contains(text(),'Погода на тиждень')]")
+    cookie_accepted = (By.XPATH, '//p[contains(text(),"Соглашаюсь")]')
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
@@ -21,3 +24,6 @@ class MainPage:
 
     def get_pageTitle(self):
         return self.driver.title
+
+    def click_cookie_accepted(self):
+        self.driver.find_element(*self.cookie_accepted).click()

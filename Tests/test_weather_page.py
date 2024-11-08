@@ -9,6 +9,7 @@ class TestWeatherPage:
         driver.get(TestData.URL)
 
         main_page = MainPage(driver)
+        main_page.click_cookie_accepted()
         main_page.click_weather_button()
         weather_page = WeatherPage(driver)
 
