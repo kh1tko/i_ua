@@ -8,7 +8,7 @@ class MainPage:
     textbox_search_field = (By.ID, "searchQ")
     find_search_button = (By.XPATH, "//input[@value='Знайти']")
     weather_button = (By.XPATH, "//a[contains(text(),'Погода на тиждень')]")
-    cookie_accepted = (By.XPATH, '//p[contains(text(),"Соглашаюсь")]')
+    cookie_accepted = (By.CSS_SELECTOR, '.fc-cta-consent > p:nth-child(2)')
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
