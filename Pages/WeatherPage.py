@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from Pages.MainPage import MainPage
 
@@ -11,10 +12,12 @@ class WeatherPage(MainPage):
         super().__init__(driver)
 
     def click_change_city_weather_menu(self):
-        self.driver.find_element(*self.change_city_weather_menu).click()
+        with allure.step('Click on change city-weather menu '):
+            self.driver.find_element(*self.change_city_weather_menu).click()
 
     def click_chosen_city_weather(self):
-        self.driver.find_element(*self.chosen_city_weather).click()
+        with allure.step('Change city for view weather'):
+            self.driver.find_element(*self.chosen_city_weather).click()
 
     def get_check_chosen_city_weather(self):
         element = self.driver.find_element(*self.check_chosen_city_weather).text

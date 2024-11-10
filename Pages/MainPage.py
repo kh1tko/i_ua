@@ -1,5 +1,6 @@
 from telnetlib import X3PAD
 
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
@@ -17,13 +18,16 @@ class MainPage:
         self.driver.find_element(*self.textbox_search_field).send_keys(text)
 
     def click_find_search_button(self):
-        self.driver.find_element(*self.find_search_button).click()
+        with allure.step('Click on the search button'):
+            self.driver.find_element(*self.find_search_button).click()
 
     def click_weather_button(self):
-        self.driver.find_element(*self.weather_button).click()
+        with allure.step('Click weather button'):
+            self.driver.find_element(*self.weather_button).click()
 
     def get_pageTitle(self):
         return self.driver.title
 
     def click_cookie_accepted(self):
-        self.driver.find_element(*self.cookie_accepted).click()
+        with allure.step('Click on the cookie accept button'):
+            self.driver.find_element(*self.cookie_accepted).click()

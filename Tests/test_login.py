@@ -42,7 +42,7 @@ class TestLogin:
 
         assert login_page.get_pageTitle() == 'Паспорт -\xa0I.UA\xa0'
     @allure.story('Success authorization with pop-up window')
-    def test_success_loin_with_popup(self, firefox):
+    def test_success_login_with_popup(self, firefox):
         driver = firefox
         driver.get(TestData.URL)
 
