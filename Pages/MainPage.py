@@ -1,5 +1,3 @@
-from telnetlib import X3PAD
-
 import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
